@@ -1,0 +1,20 @@
+create table poll (
+  id INT NOT NULL AUTO_INCREMENT,
+  question MEDIUMTEXT NOT NULL,
+  primary key (id)
+)
+
+create table answer (
+  answer_id int not null auto_increment,
+  answer mediumtext not null,
+  poll_id int not null,
+  primary key (answer_id),
+  foreign key (poll_id) references poll(id)
+)
+
+create table vote (
+  poll_id int not null,
+  answer_id int not null,
+  foreign key (poll_id) references poll(id),
+  foreign key (answer_id) references answer(answer_id)
+)
