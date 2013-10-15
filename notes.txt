@@ -1,3 +1,25 @@
+SELECT a.answer, a.answer_id, count(v.answer_id) as num_votes
+FROM conn_answer a LEFT JOIN conn_vote v
+  on a.poll_id = v.poll_id
+  and a.answer_id = v.answer_id
+where a.poll_id = 1
+group by a.answer_id
+order by num_votes desc, a.answer asc
+
+
+SELECT answer_id, count(*)
+FROM conn_vote 
+WHERE poll_id = 1
+  group by answer_id
+
+SELECT
+FROM conn_vote v left inner join conn_poll
+WHERE
+
+SELECT count(*) as num_total_votes
+FROM conn_vote
+WHERE poll_id = 1
+
 SELECT a.answer_id
 FROM conn_poll p inner join conn_answer a
   on p.id = a.poll_id
