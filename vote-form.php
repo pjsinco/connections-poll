@@ -42,12 +42,12 @@ while($row = mysql_fetch_array($result)) {
 </head>
 <body>
 <p>Q: <?php echo $question; ?></p>
-<form action="vote_process.php" method="post">
-<ul>
-<?php echo $question_list; ?>
-</ul>
-<input name='poll' type='hidden' value='<?php echo $poll; ?>'>
-<input name='' type='submit' value='Vote'>
+<form action="vote-process.php" method="post">
+  <ul>
+    <?php echo $question_list; ?>
+  </ul>
+  <input name='poll' type='hidden' value='<?php echo $poll; ?>'>
+  <input name='' type='submit' value='Vote'>
 </form>
 
 

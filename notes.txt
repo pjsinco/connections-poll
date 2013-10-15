@@ -1,3 +1,9 @@
+SELECT a.answer_id
+FROM conn_poll p inner join conn_answer a
+  on p.id = a.poll_id
+WHERE p.id = 1
+  and a.answer_id = 21;
+
 update conn_answer
   set poll_id = 1
   where answer_id = 21
