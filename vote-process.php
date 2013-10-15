@@ -65,6 +65,9 @@ if (!$_COOKIE["poll_voted_$poll"]) {
 Finally, regardless of whether or not the user has previously 
 voted, we send the user to the poll results:
 */
-header("Location: vote-tally.php?poll=$poll");
+// header("Location: vote-tally.php?poll=$poll");
+
+/* ... instead, we'll just thank the user */
+header("Location: thank-you.php");
 
 ?>

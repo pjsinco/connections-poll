@@ -22,8 +22,11 @@ if (mysql_num_rows($result) == 0) {
 }
 
 /* if the user has already voted, show the results. */
-if ($_COOKIE["poll_voted $poll"]) {
-  header("Location: vote_tally.php?poll=$poll");
+if ($_COOKIE["poll_voted_$poll"]) {
+//  header("Location: vote_tally.php?poll=$poll");
+
+  /* ... instead, we'll tell the user he's already voted */
+  header("Location: already-voted.php");
   exit;
 }
 
