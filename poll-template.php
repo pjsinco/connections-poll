@@ -26,7 +26,7 @@
 <body>
   <div id="page">
     <div id="flag">
-      <img src="http://www.do-online.org/TheDO/jaoa/connections/images/head_jaoa.gif">
-      <img src="http://www.do-online.org/TheDO/jaoa/connections/images/connections_plain.gif">
+      <img src="images/head_jaoa.gif">
+      <img src="images/connections_plain.gif">
     </div> <!-- end #flag -->
     <div id="content">
