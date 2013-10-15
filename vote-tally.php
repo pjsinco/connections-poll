@@ -62,12 +62,7 @@ header and the first piece of the page:
 */
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Poll: <?php echo $question; ?></title>
-</head>
-<body>
+<?php require('poll-template.php'); ?>
   <ul style="list-style-type: none; font-size: 12px;">
     <li style="font-weight: bold; padding-bottom: 10px;">Poll results: <?php echo $question; ?></li>
     <?php
@@ -82,15 +77,17 @@ header and the first piece of the page:
       $boxwidth = strval(1 + intval($pct)) . 'px';
     ?>
       <li style="clear: left;">
-      <?php echo $row['answer']; ?>
+      <?php echo '<strong>' . $row['answer'] . '</strong>'; ?>
       </li>
       <li style="clear: left; padding-bottom: 7px;">
-        <div style="width: <?php echo $boxwidth; ?>; height: 15px; background-color: #333333; margin-right: 5px; float: left;"></div>
+        <div style="width: <?php echo $boxwidth; ?>; height: 15px; background-color: #9c9b9c; margin-right: 5px; margin-bottom: 10px; float: left;"></div><?php echo $pct . '%'; ?>
         </li>
       <?php endwhile; ?>
     <li style="clear: left">Total votes: <?php echo $num_total_votes; ?>
     </li>
   </ul>
+  </div>
+  </div>
 </body>
 </html>
 
