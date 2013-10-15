@@ -35,21 +35,17 @@ while($row = mysql_fetch_array($result)) {
 }
 
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-
-</head>
-<body>
-<p>Q: <?php echo $question; ?></p>
-<form action="vote-process.php" method="post">
-  <ul>
-    <?php echo $question_list; ?>
-  </ul>
-  <input name='poll' type='hidden' value='<?php echo $poll; ?>'>
-  <input name='' type='submit' value='Vote'>
-</form>
-
+<?php require('poll-template.php'); ?>
+      <p><strong><?php echo $question; ?></strong></p>
+      <form action="vote-process.php" method="post">
+        <ul style="list-style-type: none; padding-left: 0px;">
+          <?php echo $question_list; ?>
+        </ul>
+        <input name='poll' type='hidden' value='<?php echo $poll; ?>'>
+        <input name='' type='submit' value='Submit vote'>
+      </form>
+    </div> <!-- end #content -->
+  </div> <!-- end #page -->
 
 </body>
 </html>
