@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Poll: <?php echo strip_tags($question); ?></title>
+  <title>Connections Poll</title>
   <style>
     body {
       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
