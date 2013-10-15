@@ -12,10 +12,10 @@ insert into conn_answer(answer, poll_id)
   values('frequently', 1)
 
 insert into conn_answer(answer, poll_id)
-  values('frequently', 2)
+  values('occasionally', 2)
 
 insert into conn_answer(answer, poll_id)
-  values('frequently', 3)
+  values('never', 3)
 
 create table conn_poll (
   id INT NOT NULL AUTO_INCREMENT,
@@ -35,3 +35,9 @@ create table conn_vote (
   answer_id int not null,
   index(poll_id)
 )
+
+
+
+Much guidance from:
+Wicked Cool PHP > INTERMEDIATE PROJECTS > #74: A User Poll
+
