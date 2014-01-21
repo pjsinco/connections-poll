@@ -18,3 +18,5 @@ insert into conn_answer(answer, poll_id)
   values('Disagree', 11);
 
 3.) Link: http://www.do-online.org/JAOA/connections/poll/vote-form.php?poll=<poll-id>
+
+4.) View results: http://www.do-online.org/JAOA/connections/poll/vote-tally.php?poll=<poll-id>
